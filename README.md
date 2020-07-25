@@ -1,5 +1,6 @@
-# anti-debug
-Anti-debugger and anti-reverse engineering techniques
+## Anti debugger techniques
+
+These proof-of-concept's demonstrate various techniques that can be used for anti-debugging and make applications harder to debug. When encountering any of these functions or methods, a reverse engineer needs to be familiar with methods for bypassing said anti-debugger techniques.
 
 ----
 
