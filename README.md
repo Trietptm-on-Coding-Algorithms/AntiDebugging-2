@@ -1,12 +1,16 @@
 ## Anti debugger techniques
 
-These proof-of-concept's demonstrate various techniques that can be used for anti-debugging and make applications harder to debug. When encountering any of these functions or methods, a reverse engineer needs to be familiar with methods for bypassing said anti-debugger techniques.
+These proof-of-concept's demonstrate various techniques that can be used for anti-debugging, debugger detection, and more. When encountering any of these functions or methods, a reverse engineer needs to be familiar with methods for bypassing said anti-debugger techniques.
 
 ----
 
 - **IsDebuggerPresent**
 
 Using the Windows API function *IsDebuggerPresent* you can determine if your process is being debugged. This function works by checking the processes PEB structure's BeingDebugged value, located at 0x2. If this PEB value is set to 1, the process is being debugged, and 0 means it's not.
+
+- **CheckRemoteDebuggerPresent**
+
+Similar to the *IsDebuggerPresent* methods, the *CheckRemoteDebuggerPresent* API function allows you to check if any process is being debugged, by passing a handle of that process as the first parameter of the function. It set's a user-provided variable to either TRUE or FALSE, based on whether the process is being debugged or not.
 
 - **GetProcessMemoryInfo**
 
